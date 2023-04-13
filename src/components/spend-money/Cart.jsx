@@ -143,13 +143,21 @@ function Cart() {
             <span className="product" id="price">$ {products.price.toLocaleString("en-US")}</span>
           </div>
           <div className="buyAndSellContainer">
-            <button
+            {products.quantity==0?
+            (            <button
+              className="btn-sell-o"
+              id="sell"
+              onClick={() => handleMinusClick(index)}
+            >
+              Interest
+            </button>):(            <button
               className="btn-sell"
               id="sell"
               onClick={() => handleMinusClick(index)}
             >
               Interest
-            </button>
+            </button>)}
+
             <span className="product">{products.quantity}</span>
             <button
               className="btn-buy"

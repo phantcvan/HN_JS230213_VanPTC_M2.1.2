@@ -98,6 +98,13 @@ padding:10px;
   border: 1px solid rgb(217,34,75) ;
   border-radius:10px 0px 0px 10px  ;
 }
+.btn-sell-o {
+  padding: 0px 10px;
+  color:rgb(248,204,212);
+  background-color: #fff;
+  border: 1px solid rgb(248,204,212);
+  border-radius:10px 0px 0px 10px  ;
+}
 .product{
   color:black;
   font-weight: 550;
