@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import ListProduct from "./components/ListProduct";
+import Cart from "./components/spend-money/Cart";
 
 
 
@@ -8,9 +8,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <ListProduct/>
-
-        </div>
+        <Cart />
+      </div>
     );
   }
 }
