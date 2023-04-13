@@ -1,0 +1,147 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+header{
+  text-align: center;
+}
+
+
+.header-content{
+  padding:  0 2rem 2rem 2rem;
+}
+
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  /* margin: 1.5rem; */
+  margin-top: 5px;
+  width: 60px;
+  height: 30px;
+}
+
+
+.navbar-content{
+  background-color: rgb(214,18,52);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  padding: 10px;
+  position: sticky;
+  top:0;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+
+.element{
+  max-width: 250px;
+    margin: 1rem;
+    object-fit: cover;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    box-shadow: rgb(255 255 255 / 10%) 0px 1px 1px 0px inset, rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
+}
+
+
+.element img {
+  width: 250px;
+  height: 250px;
+  background-color: #fff;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+
+.element p {
+  font-size: 1.2rem;
+  padding: 0.3rem;
+}
+
+
+.title{
+display:flex;
+justify-content: space-around;
+padding:10px;
+}
+
+
+.buyAndSellContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:1rem;
+}
+
+
+.btn-sell {
+  padding: 0px 10px;
+  color:rgb(217,34,75);
+  background-color: #fff;
+  border: 1px solid rgb(217,34,75) ;
+  border-radius:10px 0px 0px 10px  ;
+}
+.product{
+  color:black;
+  
+}
+
+.btn-buy {
+  padding: 0px 10px;
+  background-color: rgb(217,34,75);
+  color:#fff;
+  font-weight: 550;
+  border-radius:0px 10px 10px 0px  ;
+}
+.cart {
+  width:60%;
+  margin:0 auto;
+  margin-bottom: 40px;
+}
+.cart_title{
+  color:rgb(217,34,75);
+  background-color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+.product_buy{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(230,230,231);
+  padding:10px;
+  margin:10px 30px;
+
+}
+.total_buy{
+  font-weight: 600;
+  color:rgb(217,34,75);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.btnReset{
+  color:#fff;
+  background-color: rgb(217,34,75);
+  border: 1px solid rgb(217,34,75) ;
+  border-radius:10px 0px 0px 10px  ;
+  padding: 0px 10px;
+  width:100px;
+  font-weight: 550;
+}
