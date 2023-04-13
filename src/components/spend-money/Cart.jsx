@@ -33,10 +33,10 @@ function Cart() {
 
 
 
-  const handleMinusClick = (index) => {
-    const newProducts = [...products];
-    const sell = products[index];
+  const handleSellClick = (index) => {
     const newCart = [...cart];
+    const sell = products[index];
+    const newProducts = [...products];
     if (newProducts[index].quantity >= 1) {
       newProducts[index].quantity--;
 
@@ -72,10 +72,8 @@ function Cart() {
     setProducts(newProducts);
   };
 
-
-
   // Button thêm/ bớt ở giỏ hàng
-  const handleMinusCart = (index) => {
+  const handleSellCart = (index) => {
     const newCart = [...cart];
     if (newCart[index].quantity > 1) {
       newCart[index].quantity--;
@@ -143,20 +141,20 @@ function Cart() {
             <span className="product" id="price">$ {products.price.toLocaleString("en-US")}</span>
           </div>
           <div className="buyAndSellContainer">
-            {products.quantity==0?
-            (            <button
-              className="btn-sell-o"
-              id="sell"
-              onClick={() => handleMinusClick(index)}
-            >
-              Interest
-            </button>):(            <button
-              className="btn-sell"
-              id="sell"
-              onClick={() => handleMinusClick(index)}
-            >
-              Interest
-            </button>)}
+            {products.quantity == 0 ?
+              (<button
+                className="btn-sell-o"
+                id="sell"
+                onClick={() => handleSellClick(index)}
+              >
+                Interest
+              </button>) : (<button
+                className="btn-sell"
+                id="sell"
+                onClick={() => handleSellClick(index)}
+              >
+                Interest
+              </button>)}
 
             <span className="product">{products.quantity}</span>
             <button
@@ -176,8 +174,8 @@ function Cart() {
       {cart.map((product, index) =>
         <div key={index} className="product_buy">
           <div className="buy_title">{product.title}</div>
-          <div  className="buy_quantity">
-            <button onClick={() => handleMinusCart(index)}> - </button>
+          <div className="buy_quantity">
+            <button onClick={() => handleSellCart(index)}> - </button>
             <span> {product.quantity} </span>
             <button onClick={() => handleBuyCart(index)}> + </button>
 
