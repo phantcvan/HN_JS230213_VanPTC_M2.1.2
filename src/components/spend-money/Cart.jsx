@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { productsData } from "./productsData";
 
-function Page() {
+function Cart() {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState("");
   const [products, setProducts] = useState(productsData);
@@ -192,4 +192,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default Cart;
