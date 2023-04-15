@@ -1,10 +1,19 @@
 import { useState } from "react";
 import { productsData } from "./productsData";
+import  Header  from './Header';
+
 
 function Cart() {
   const [cart, setCart] = useState([]);
-  const [total, setTotal] = useState("");
-  const [products, setProducts] = useState(productsData);
+  const [total, setTotal] = useState(0);
+  const productsWithQuantity = productsData.map(product => {
+    return {
+      ...product,
+      "quantity": 0, // thêm giá trị mới cho key "quantity"
+    };
+  });
+  const [products, setProducts] = useState(productsWithQuantity);
+
 
   const handleBuyClick = (index) => {
     const newCart = [...cart];
@@ -126,11 +135,7 @@ function Cart() {
 
   return (<>
     <div className='navbar-content'>
-      {total > 0 ?
-        (<div>To Spend <span><b> ${(128000000000 - total).toLocaleString("en-US")}</b> </span>You Have a Lot of money</div>
-        ) : (<div>To Spend <span><b> ${(128000000000).toLocaleString("en-US")}</b> </span>You Have money</div>
-        )
-      }
+      <Header total={total} />
     </div>
     <div className="container">
       {products.map((products, index) => (
@@ -178,7 +183,6 @@ function Cart() {
             <button onClick={() => handleSellCart(index)}> - </button>
             <span> {product.quantity} </span>
             <button onClick={() => handleBuyCart(index)}> + </button>
-
           </div>
         </div>
       )}
